@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Talanstrust</title>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <section aria-label="nav">
+    <div class="topnav" id="myTopnav">
+      <a href="#Home" class="active">Home</a>
+      <a href="#About">About</a>
+      <a href="#News">News</a>
+      <a href="#Events">Events</a>
+      <a href="#Contact">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars">&equals;</i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Carousel -->
+  <section aria-label="Labels">
+    <div class="carousel" data-carousel id="Header_Carousel">
+      <button class="carousel-button prev" data-carousel-button="prev">&lt;</button>
+      <button class="carousel-button next" data-carousel-button="next">&gt;</button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="https://images.unsplash.com/photo-1506543277633-99deabfcd722?auto=format&fit=crop&q=80&w=2288&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="pancakes">
+        </li>
+        <li class="slide">
+          <img src="https://images.unsplash.com/photo-1502301197179-65228ab57f78?auto=format&fit=crop&q=80&w=2785&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gizmo">
+        </li>
+        <li class="slide">
+          <img src="https://images.unsplash.com/photo-1488751045188-3c55bbf9a3fa?auto=format&fit=crop&q=80&w=2787&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gizmo">
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div style="padding:15px 15px 2500px;font-size:30px;margin-top:30px; z-index:2;">
+    <p><b>This example demonstrates how to hide a navbar when the user starts to scroll the page.</b></p>
+    <p>Scroll down this frame to see the effect!</p>
+    <p>Scroll up to show the navbar.</p>
+    <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  
+</body>
+<script>
+    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("myTopnav").style.top = "0";
+    } else {
+        document.getElementById("myTopnav").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+    }
+    
+</script>
+</html>
